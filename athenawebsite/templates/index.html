@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Iskolar Tech">
+    <meta name="keywords" content="Education, LMS">
+    <meta name="revised" content="May 29, 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Athena</title>
+
+    <link rel="stylesheet" href={% static 'css/index.css' %}>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Comfortaa'>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+        <a href={% url 'login' %}>log in</a>
+        <a href={% url 'underconstruction' %}>sign up</a>
+    </div>
+
+    <br><br>
+    <div class="heading">
+        <span id="athena">athena</span>
+        <span id="learning">learning</span> 
+        <h3 id="slogan">mobile learning enhanced</h3>
+    </div>
+
+    
+    <img id="wave_background" src={% static "media/wave1.svg" %}>
+
+    <div id="description">
+        <img id="homepage-img" src={% static "media/homepage-img.svg" %}>
+        <br><br><br>
+        <div>
+            <h4>a smart learning platform that enables intuitive, personalized, and informed learning</h4>
+        </div>
+    </div>
+
+    <footer>
+        <p><b>athena</b> a smart learning platform that enables intuitive, personalized, and informed learning</p><br>
+        <p>athena Ⓒ 2021</p>
+    </footer>
+
+
+  </body>
+</html>
+
+

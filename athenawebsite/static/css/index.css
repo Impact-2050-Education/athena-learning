@@ -1,0 +1,104 @@
+/* Color Hex codes:
+blue: #53D2DB
+sky blue: #E5FAF8
+red: #FF8A77
+yellow: #FFCE83
+gray: #989797  */
+
+*{
+    font-family: "Comfortaa";
+    box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0;
+}
+
+.header {
+    background-color: #E5F8FA;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height:  50px;
+}
+
+.header a {
+    float: right;
+    color: #989797;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.heading {
+    padding-top: 18px;
+    font-size:  36px;
+    text-align: center;
+  }
+  
+#athena{
+    color:  #53D2DB;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+#learning{
+    color: #FF8A77;
+    font-size: 50px;
+    font-weight:  bold;
+} 
+
+.heading #slogan {
+    text-align: center;
+    color: #989797;
+    font-size: 18px;
+}
+
+#wave_background {
+    z-index: -1;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#description {
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#description img,h4{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#description h3 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: left ;
+    padding: 15px;
+    width:100%;
+    font-size: 10px;
+    background-color: #E5F8FA ;
+}
+
+P{
+  margin: 0;
+}

@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Iskolar Tech">
+        <meta name="keywords" content="Education, LMS">
+        <meta name="revised" content="May 29, 2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Athena</title>
+        
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Comfortaa'>
+        <link rel="stylesheet" type="text/css" href={% static "css/student_dashboard.css" %}>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+            <div class="profile">
+                <span><img id="profile_picture" src={% static "media/img1.jpg"%} style="border-radius: 50%; max-width: 150px; min-width: 50px;"></span>
+                <span>
+                    <h1 id="student__name">Luch</h1>
+                </span>
+                <hr>
+            </div>
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href={% url 'dashboard' %}>dashboard</a>
+            <a href={% url 'underconstruction' %}>classes</a>
+            <a data-toggle="modal" data-target="#myModal">quizzes</a>
+            <a href={% url 'underconstruction' %}>quiz results</a>
+            <a href={% url 'underconstruction' %}>parent notifications</a>
+        </div>
+
+        <div id="main">
+          <a onclick="openNav()">&#9776</a>
+          <span>athena</span>
+        </div>
+        
+        <br><br>
+        <div>
+            <img id="wave_background" src={% static "media/wave1.svg" %}>
+        </div>
+        <div class="dashboard">
+            <div class="greetings">
+                <span id="Hi">Hi&nbsp;</span>
+                <span id="student_name">Luch,</span>
+            </div>
+            <div>
+                <h4>
+                    Welcome to your dashboard. I'm <span style="font-weight: bold; color: #FF8A77;">athena</span>, your virtual classmate. Feel free to ask questions by clicking on the button below.
+                </h4>
+                <span style="width: 30%;"><img id="athena_avatar"src={% static "media/athena.png" %}></span>
+                 <span style="width: 70%;">
+                <button id="athena_button">click here</button>
+            </span>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="todolist">
+                <div style="width: 100%; overflow: auto; "id="myDIV" class="header_todolist">
+                <br>
+                    <img src={% static "media/todolist.svg" %} style="width: 150px;">
+                    <h2 style="font-size: 36px;">to do list</h2>
+                    <input style="font-size: 12px; color: black; width:70%;margin-left: 10%;"type="text" id="myInput" placeholder="Title...">
+                    <div style="width: 10%;"onclick="newElement()" class="addBtn">Add</div>
+                </div>
+                <div id=list>
+                    <ul id="myUL"></ul>
+                </div>
+            </div>
+
+            <div>
+            <br>
+                <div id="quizzes">
+                    <img src={% static "media/quizzes.svg" %} style="width: 130px;"><br>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="quizzes_btn">View Quizzes</a></button>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <!-- <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">math quizzes</h4>
+                </div> -->
+                <div class="flex-container">
+                  <div class="flex-item-right">Quiz 1<br> 
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href={% url 'quiz1' %}>attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-right">Quiz 2<br> 
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-right">Quiz 3<br> 
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-right">Quiz 4<br> 
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-right">Quiz 5<br> 
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+              
+                  <div class="flex-item-left">Quiz 6<br>
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-left">Quiz 7<br>
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+
+                  <div class="flex-item-left">Quiz 8<br>
+                  <span class="sl"> 
+                  deadline:<br>
+                  no. of attempts
+                  </span>
+                  <br><button class="button"><a id="button" href="underconstruction.html">attempt</a></button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <br><br>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+
+            var myNodelist = document.getElementsByTagName("LI");
+            var i;
+            for (i = 0; i < myNodelist.length; i++) {
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close";
+              span.appendChild(txt);
+              myNodelist[i].appendChild(span);
+            }
+
+            // Click on a close button to hide the current list item
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+              close[i].onclick = function() {
+                var div = this.parentElement;
+                div.style.display = "none";
+              }
+            }
+
+            // Add a "checked" symbol when clicking on a list item
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function(ev) {
+              if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+              }
+            }, false);
+
+            // Create a new list item when clicking on the "Add" button
+            function newElement() {
+              var li = document.createElement("li");
+              var inputValue = document.getElementById("myInput").value;
+              var t = document.createTextNode(inputValue);
+              li.appendChild(t);
+              if (inputValue === '') {
+                alert("You must write something!");
+              } else {
+                document.getElementById("myUL").appendChild(li);
+              }
+              document.getElementById("myInput").value = "";
+
+              var span = document.createElement("SPAN");
+              var txt = document.createTextNode("\u00D7");
+              span.className = "close";
+              span.appendChild(txt);
+              li.appendChild(span);
+
+              for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                  var div = this.parentElement;
+                  div.style.display = "none";
+                }
+              }
+            }
+        </script>
+    </body>
+</html>

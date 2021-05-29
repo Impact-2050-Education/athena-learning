@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Iskolar Tech">
+        <meta name="keywords" content="Education, LMS">
+        <meta name="revised" content="May 29, 2021">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Athena</title>
+        
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Comfortaa'>
+        <style type="text/css">
+          *{
+            font-family: "Comfortaa";
+          }
+          h1
+        </style>
+    </head>
+    <body style="padding: 20px;">
+      <div style="text-align: center;">
+        <h1 style="color: #53D2DB;">athena<span style="color: #FF8A77; font-weight: regular;">learning</span></h1>
+        <img src={% static "media/underconstruction.svg" %}>
+        <p>This page of the website is currently under construction. We should be back shortly. Thank you for your patience.<br><br><br>
+        Return to <a href={% url 'dashboard' %} style="text-decoration: none;">dashboard</a></p>
+      </div>
+    </body>
+</html>

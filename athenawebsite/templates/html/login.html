@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="author" content="Iskolar Tech">
+    <meta name="keywords" content="Education, LMS">
+    <meta name="revised" content="May 29, 2021">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Athena</title>
+
+    <link rel="stylesheet" href={% static "css/login.css" %}>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Comfortaa'>
+</head>
+
+<body class="login_page">
+	<div class="login_content">
+		<div>
+			<a href={% url 'homepage' %}><img id="back_button" src={% static "media/return.svg" %}></a>
+		</div>
+		<div>
+			<span id="athena" style="font-size: 40px;">athena</span>
+      		<span id="learning" style="font-size: 30px;">learning</span> 
+		</div>
+		<form id="login_information" action="">
+			<label for="username">username</label><br>
+			<input type="text" id="username" name="username"><br>
+			<br>
+			<label for="password">password</label><br>
+			<input type="text" id="password" name="password"><br>
+			<br>
+			<input type="checkbox" name="remember_me">
+			<label for="remember_me">remember me</label>
+		</form>
+		<div>
+			<a onclick="getLoginInfo()" href={% url 'dashboard' %}><img id="login_button"src={% static "media/log-in.png" %} alt="log in"></a>
+		</div>
+	</div>
+</body>
+</html>

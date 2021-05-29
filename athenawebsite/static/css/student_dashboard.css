@@ -1,0 +1,344 @@
+*{
+    font-family: "Comfortaa";
+    box-sizing: border-box;
+}
+
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.sidenav {
+    height: 100%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: #E5F8FA; /* Black*/
+    transition: 0.5s;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+  }
+  
+  .sidenav a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+.profile{
+    padding: 10px;
+    text-align: center;
+}
+  
+#main {
+    transition: margin-left .5s;
+    padding: 10px;
+    background-color: #E5F8FA;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height:  50px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 100%;
+  }
+
+#main span{
+    color: #53D2DB;
+    font-size: 25px;
+}
+
+#main a {
+    color: #989797 ;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    font-size: 25px;
+}
+
+.dashboard{
+    width: 75%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 54px;
+    display: flex;
+    align-items: center;
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 100px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    height: auto;
+}
+
+.dashboard .greetings{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.dashboard h4{
+  font-size: 27px;
+  padding: 20px;
+}
+.dashboard #Hi{
+    color: #53D2DB;
+}
+.dashboard #student_name{
+    color: #FF8A77;
+}
+
+.header_todolist {
+  background-color: #53D2DB;
+  padding: 10px 10px;
+  color: white;
+  text-align: center;
+  border-top-right-radius: 23px;
+  border-top-left-radius: 23px;
+  font-size: 36px;
+  line-height: 40px;
+  height: 300px;
+}
+
+/* Clear floats after the header */
+.header_todolist:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+input {
+  margin-left: 10%;
+  border: none;
+  border-radius: 0;
+  width: 70%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+  height: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 1px;
+  width: 10%;
+  height: 40px;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px; 
+  cursor: pointer;
+  transition: 0.3s;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-right:  10%;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}   
+
+.todolist{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  /* Style the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Set all odd list items to a different color (zebra-stripes) */
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+  .todolist{    
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    overflow: auto;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+ 
+  #wave_background {
+    z-index: -1;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    overflow-x: hidden;
+      -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#quizzes{
+    max-width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    float: center;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+
+#quizzes button{
+    font-family: "Comfortaa";
+    font-size: 18px;
+    line-height: 8px;
+    letter-spacing: -0.015em;
+    text-align: center;
+    text-decoration: none;
+    background-color: #53D2DB;
+    color: white;
+    padding: 10px;
+    border-radius:  10px;
+    bottom: 5px;
+    border: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item-left {
+    background-color: #E5F8FA;
+    padding: 10px;
+    flex: 50%;
+    width: 50px;
+    height: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  
+  .flex-item-right {
+    background-color: #E5F8FA;
+    padding: 10px;
+    flex: 50%;
+    height: 150px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+  .button{
+    background-color: #53D2DB;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .sl{
+    font-size: 15px;
+  }
+  #button{
+      color: white;
+  }
+  #button:hover{
+      text-decoration: none;
+  }
+  
+  #wave_background2 {
+       z-index: -1;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    overflow-x: hidden;
+}
+#athena_avatar{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 150px;
+}
+
+#athena_button{
+  border-radius: 10px;
+  color: white;
+  background-color: #53D2DB;
+  font-size: 20px;
+  border:  0;
+  width: 80%;
+  margin: 10% 10PX;
+  outline: 0;
+}
